@@ -1,3 +1,5 @@
+## [1.1.0] - Null Safety Migrated
+* Change homepage to Github repo
 ## [1.0.2] - Update description and install instructions
 * Change homepage to Github repo
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gradient_text/gradient_text.dart';
+import 'package:gradient_text_null_safety/gradient_text.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
+  MyHomePage({Key? key, this.title}) : super(key: key);
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -28,9 +28,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Gradient gradient = LinearGradient(
       colors: [Colors.deepPurple, Colors.deepOrange, Colors.pink]);
-  bool shadow = false;
-  bool small = false;
-  bool bold = false;
+  bool? shadow = false;
+  bool? small = false;
+  bool? bold = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title!),
       ),
       body: Center(
         child: Padding(
@@ -54,9 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   'Linear Gradient',
                   gradient: gradient,
                   style: TextStyle(
-                    fontSize: (small) ? 14 : 42,
-                    shadows: (shadow) ? [Shadow(color: Colors.black26, offset: Offset(0, 3), blurRadius: 3)] : null,
-                    fontWeight: (bold) ? FontWeight.bold : FontWeight.normal
+                    fontSize: small! ? 14 : 42,
+                    shadows: shadow! ? [Shadow(color: Colors.black26, offset: Offset(0, 3), blurRadius: 3)] : null,
+                    fontWeight: bold! ? FontWeight.bold : FontWeight.normal
                   ),
                 ),
               )),

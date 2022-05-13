@@ -8,6 +8,7 @@ description: A new Flutter application.
 # build by specifying --build-name and --build-number, respectively.
 # Read more about versioning at semver.org.
 version: 1.0.0+1
+publish_to: none
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -18,6 +19,7 @@ dependencies:
   gradient_text_null_safety:
     git:
       url: git@github.com:sabreys/gradient_text_null_safety.git
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
